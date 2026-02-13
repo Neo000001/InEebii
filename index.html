@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free GST Invoice Generator India | No Login Required</title>
+<meta name="description"
+content="Create GST invoices instantly with our free invoice generator. No login, no signup. Auto GST calculation (CGST, SGST, IGST) and PDF download.">
+
+<meta name="keywords"
+content="free gst invoice generator, invoice maker india, gst bill creator, invoice without login, free invoice tool">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- GOOGLE ADSENSE -->
+<!-- Replace YOUR-ADSENSE-ID -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-ID"
+crossorigin="anonymous"></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Eebii Free GST Invoice Generator</h1>
+    <p>No Login • Free • Instant PDF</p>
+</header>
+
+<!-- TOP AD -->
+<div class="ad-box">
+    TOP AD SPACE (AdSense)
+</div>
+
+<div class="layout">
+
+    <!-- LEFT SIDE FORM -->
+    <div class="form-side">
+
+        <section class="card">
+            <h2>Business Details</h2>
+            <input id="businessName" placeholder="Business Name" oninput="calculate()">
+            <input id="businessState" placeholder="Business State" oninput="calculate()">
+            <input id="businessGST" placeholder="GSTIN" oninput="calculate()">
+        </section>
+
+        <section class="card">
+            <h2>Client Details</h2>
+            <input id="clientName" placeholder="Client Name" oninput="calculate()">
+            <input id="clientState" placeholder="Client State" oninput="calculate()">
+            <input id="clientGST" placeholder="Client GSTIN" oninput="calculate()">
+        </section>
+
+        <section class="card">
+            <h2>Invoice Items</h2>
+            <table id="itemTable">
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>GST%</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody id="itemBody"></tbody>
+            </table>
+
+            <button onclick="addRow()">+ Add Item</button>
+        </section>
+
+    </div>
+
+    <!-- RIGHT SIDE LIVE PREVIEW -->
+    <div class="preview-side">
+
+        <div class="invoice-paper" id="invoicePreview">
+            <h2 id="previewBusiness">Business Name</h2>
+            <p id="previewBusinessGST">GSTIN:</p>
+
+            <hr>
+
+            <p><strong>Bill To:</strong></p>
+            <p id="previewClient">Client Name</p>
+
+            <table class="preview-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="previewItems"></tbody>
+            </table>
+
+            <hr>
+
+            <p>Subtotal: ₹ <span id="pSubtotal">0</span></p>
+            <p>CGST: ₹ <span id="pCgst">0</span></p>
+            <p>SGST: ₹ <span id="pSgst">0</span></p>
+            <p>IGST: ₹ <span id="pIgst">0</span></p>
+
+            <h3>Total: ₹ <span id="pGrand">0</span></h3>
+
+            <p><strong>Amount in Words:</strong></p>
+            <p id="amountWords">Zero Rupees Only</p>
+        </div>
+
+        <button id="downloadPdf">Download PDF</button>
+
+        <!-- SIDE AD -->
+        <div class="ad-box">SIDEBAR AD SPACE</div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Eebii Invoice Tool
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
